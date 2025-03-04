@@ -13,4 +13,5 @@ langchain-google-genai
 joblib
 pypdf
 streamlit
+pysqlite3-binary
 chromadb

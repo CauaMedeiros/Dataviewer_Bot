@@ -38,11 +38,7 @@ conversation_history = []
 vectordb = Chroma(
             collection_name="documents",
             embedding_function=embedding,
-            persist_directory=persist_directory,
-            settings=Settings(
-                database="duckdb"
-            )
-        )
+)
 
 prompt = ChatPromptTemplate.from_messages([
             ("system", """

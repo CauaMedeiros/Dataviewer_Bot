@@ -9,6 +9,7 @@ from dotenv import load_dotenv
 from typing import List, Dict
 import os
 from langchain_google_genai import ChatGoogleGenerativeAI
+from langchain_google_genai import GoogleGenerativeAIEmbeddings
 from IPython.display import display, Markdown
 import textwrap
 import warnings
@@ -24,11 +25,10 @@ def to_markdown(text):
   text = text.replace('•', '  *')
   return Markdown(textwrap.indent(text, '> ', predicate=lambda _: True))
 
-load_dotenv()
-api_key = os.getenv('GOOGLE_API_KEY')
+api_key = st.secrets["GOOGLE_API_KEY"]
 
 llm = ChatGoogleGenerativeAI(model="gemini-1.5-pro", google_api_key=api_key, temperature=0.6)
-embedding = OllamaEmbeddings(model="all-minilm:33m")
+embedding = GoogleGenerativeAIEmbeddings(model="models/text-embedding-004", google_api_key=api_key)
 
 persist_directory = "./db"
 max_history = 5

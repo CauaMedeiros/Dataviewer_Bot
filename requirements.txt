@@ -13,9 +13,7 @@ langchain-google-genai
 joblib
 pypdf
 streamlit
-<<<<<<< HEAD:requiriments.txt
 pysqlite3-binary
 chromadb
-=======
 chromadb
->>>>>>> 04ea3de93366cfa504029842df21bae3f924664b:requirements.txt
+

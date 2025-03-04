@@ -1,0 +1,16 @@
+pandas
+matplotlib
+numpy
+seaborn
+scikit-learn
+google-generativeai
+pymupdf
+langchain
+langchain-community
+langchain-chroma
+langchain-ollama
+langchain-google-genai
+joblib
+pypdf
+streamlit
+chromadb

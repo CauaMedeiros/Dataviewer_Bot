@@ -12,6 +12,7 @@ from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_google_genai import GoogleGenerativeAIEmbeddings
 from IPython.display import display, Markdown
 import textwrap
+from chromadb.config import Settings
 import warnings
 import streamlit as st
 
@@ -37,7 +38,10 @@ conversation_history = []
 vectordb = Chroma(
             collection_name="documents",
             embedding_function=embedding,
-            persist_directory=persist_directory
+            persist_directory=persist_directory,
+            settings=Settings(
+                database="duckdb"
+            )
         )
 
 prompt = ChatPromptTemplate.from_messages([

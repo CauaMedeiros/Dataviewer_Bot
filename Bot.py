@@ -1,7 +1,11 @@
+__import__('pysqlite3')
+import sys
+sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
+import pysqlite3
+
 from langchain_community.document_loaders import TextLoader
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_core.prompts import ChatPromptTemplate
-import pysqlite3
 from langchain_chroma import Chroma
 from langchain_ollama import OllamaEmbeddings
 from langchain.chains import create_retrieval_chain
@@ -14,10 +18,6 @@ import textwrap
 from chromadb.config import Settings
 import warnings
 import streamlit as st
-
-__import__('pysqlite3')
-import sys
-sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
 
 st.sidebar.image(r"imgs/dataviewer_full.svg", use_container_width=True)
 

@@ -13,7 +13,6 @@ from langchain.chains.combine_documents import create_stuff_documents_chain
 import os
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_google_genai import GoogleGenerativeAIEmbeddings
-from IPython.display import Markdown
 import textwrap
 from chromadb.config import Settings
 import warnings

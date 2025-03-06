@@ -1,7 +1,3 @@
-__import__('pysqlite3')
-import sys
-sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
-import pysqlite3
 
 from langchain_community.document_loaders import TextLoader
 from langchain_text_splitters import RecursiveCharacterTextSplitter
@@ -40,7 +36,8 @@ conversation_history = []
 vectordb = Chroma(
             collection_name="documents",
             embedding_function=embedding,
-)
+            persist_directory=persist_directory
+        )
 
 prompt = ChatPromptTemplate.from_messages([
             ("system", """

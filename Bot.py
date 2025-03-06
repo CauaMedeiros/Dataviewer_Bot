@@ -1,6 +1,7 @@
 from langchain_community.document_loaders import TextLoader
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_core.prompts import ChatPromptTemplate
+import pysqlite3
 from langchain_chroma import Chroma
 from langchain_ollama import OllamaEmbeddings
 from langchain.chains import create_retrieval_chain

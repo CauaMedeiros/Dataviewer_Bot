@@ -1,26 +1,23 @@
 from langchain_community.document_loaders import TextLoader
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_core.prompts import ChatPromptTemplate
-
-__import__('pysqlite3')
-import sys
-sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
-
 import pysqlite3
 from langchain_chroma import Chroma
 from langchain_ollama import OllamaEmbeddings
 from langchain.chains import create_retrieval_chain
 from langchain.chains.combine_documents import create_stuff_documents_chain
-from dotenv import load_dotenv
-from typing import List, Dict
 import os
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_google_genai import GoogleGenerativeAIEmbeddings
-from IPython.display import display, Markdown
+from IPython.display import Markdown
 import textwrap
 from chromadb.config import Settings
 import warnings
 import streamlit as st
+
+__import__('pysqlite3')
+import sys
+sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
 
 st.sidebar.image(r"imgs/dataviewer_full.svg", use_container_width=True)
 

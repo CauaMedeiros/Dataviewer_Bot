@@ -10,7 +10,6 @@ import os
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_google_genai import GoogleGenerativeAIEmbeddings
 import textwrap
-import chromadb
 import warnings
 import streamlit as st
 

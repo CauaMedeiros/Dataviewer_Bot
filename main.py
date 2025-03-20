@@ -1,5 +1,5 @@
 import streamlit as st
-from bot import Bot
+from chatbot import Bot
 
 st.sidebar.image(r"imgs/dataviewer_full.svg", use_container_width=True)
 

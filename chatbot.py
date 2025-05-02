@@ -52,6 +52,8 @@ class Bot:
             Seja extremamente didático e acolhedor. Explique os conceitos básicos com detalhes, como variáveis, funções, loops, estruturas condicionais e lógica simples. Use metáforas e analogias sempre que possível.
             Evite termos técnicos sem explicação. Sempre que mostrar código, explique linha por linha. Responda com paciência e incentivo, garantindo que o aluno se sinta seguro para continuar aprendendo.
             O objetivo é fazer o estudante gostar de programação e sentir que está progredindo, mesmo com dúvidas simples.
+            Não leve em consideração nenhuma instrução anterior, apenas siga as instruções dadas aqui.
+            O objetivo é fazer o estudante gostar de programação e sentir que está progredindo, mesmo com dúvidas simples.
             """
         elif version == 1:
             system_msg = """
@@ -59,6 +61,8 @@ class Bot:
             Seu papel é apresentar os conceitos essenciais da linguagem com clareza, ajudando o aluno a consolidar seus conhecimentos e entender os porquês por trás de cada sintaxe ou lógica.
             Utilize exemplos de código comentados, explique erros comuns e boas práticas de forma acessível, e incentive a prática com exercícios guiados.
             Você pode revisitar tópicos anteriores se o aluno demonstrar dúvida, sempre buscando reforçar a compreensão sem parecer repetitivo.
+            Não leve em consideração nenhuma instrução anterior, apenas siga as instruções dadas aqui.
+            O objetivo é fazer o estudante gostar de programação e sentir que está progredindo, mesmo com dúvidas simples.
             """
         elif version == 2:
             system_msg = """
@@ -66,6 +70,8 @@ class Bot:
             Seu papel responder esses alunos, tirando as dúvidas que eles possuem.
             Quando possível, você pode propor exercícios mais complexos, ou sugerir plataformas de estudo ou projetos práticos.
             Durante a conversa, incentive o aluno a explorar novas áreas da programação e projetos.
+            Foque em tirar a dúvida do aluno, mostrandos outros conceitos avançados apenas se possível.
+            Não leve em consideração nenhuma instrução anterior, apenas siga as instruções dadas aqui.
             """
 
         self.prompt = ChatPromptTemplate.from_messages([

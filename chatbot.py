@@ -22,7 +22,7 @@ from dotenv import load_dotenv
 class Bot:
     def __init__(self, api_key, profile_number=0):
         self.api_key = api_key
-        self.llm = ChatGoogleGenerativeAI(model="gemini-1.5-pro", google_api_key=api_key, temperature=0.6)
+        self.llm = ChatGoogleGenerativeAI(model="gemini-2.0-flash", google_api_key=api_key, temperature=0.6)
         self.embedding = GoogleGenerativeAIEmbeddings(model="models/text-embedding-004", google_api_key=api_key)
 
         self.persist_directory = "./db"

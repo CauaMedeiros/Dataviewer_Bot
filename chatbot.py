@@ -22,7 +22,7 @@ from dotenv import load_dotenv
 class Bot:
     def __init__(self, api_key, profile_number=0):
         self.api_key = api_key
-        self.llm = ChatGoogleGenerativeAI(model="gemini-2.0-flash", google_api_key=api_key, temperature=0.6)
+        self.llm = ChatGoogleGenerativeAI(model="gemini-1.5-flash", google_api_key=api_key, temperature=0.6)
         self.embedding = GoogleGenerativeAIEmbeddings(model="models/text-embedding-004", google_api_key=api_key)
 
         self.persist_directory = "./db"
@@ -92,9 +92,7 @@ class Bot:
 
         loader = TextLoader(file_path=files_dir, encoding="utf-8")
         documents = loader.load()
-
-        documents = [doc for doc in documents if doc.page_content and doc.page_content.strip()]
-
+        
         text_splitter = RecursiveCharacterTextSplitter(
             chunk_size=chunk_size,
             chunk_overlap=chunk_overlap

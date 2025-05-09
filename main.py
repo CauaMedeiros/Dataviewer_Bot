@@ -49,7 +49,7 @@ if st.session_state.current_screen == "home":
         st.markdown("<p style='text-align: center; color: #8e8f94; font-size:14px'>Desafia e Apresenta Conceitos Avançados</p>", unsafe_allow_html=True)
 
 elif st.session_state.current_screen == "chat":
-    st.sidebar.image(r"imgs/dataviewer_full.svg", use_container_width=True)
+    st.sidebar.image(r"imgs/dataviewer_logo.svg", use_container_width=True)
 
 
     with st.sidebar:

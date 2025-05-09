@@ -93,6 +93,8 @@ class Bot:
         loader = TextLoader(file_path=files_dir, encoding="utf-8")
         documents = loader.load()
 
+        documents = [doc for doc in documents if doc.page_content and doc.page_content.strip()]
+
         text_splitter = RecursiveCharacterTextSplitter(
             chunk_size=chunk_size,
             chunk_overlap=chunk_overlap

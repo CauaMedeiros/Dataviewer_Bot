@@ -54,7 +54,7 @@ elif st.session_state.current_screen == "chat":
 
     with st.sidebar:
             st.markdown("<br><br>", unsafe_allow_html=True)
-            st.markdown("<p style='text-align: center; color: #8e8f94; font-size:14px'>Bot Educacional desenvolvido para apoiar alunos com dúvidas em programação. Resultado de um projeto de pesquisa desenvolvido por estudantes da Escola de Ciência e Tecnologia da UFRN, com o objetivo de facilitar o aprendizado e promover o desenvolvimento de habilidades na área.</p>", unsafe_allow_html=True)
+            st.markdown("<p style='text-align: center; color: #8e8f94; font-size:14px'>Bot Educacional desenvolvido para apoiar alunos com dúvidas em programação. É o resultado de um projeto de pesquisa desenvolvido por estudantes da Escola de Ciência e Tecnologia da UFRN, com o objetivo de facilitar o aprendizado e promover o desenvolvimento de habilidades na área.</p>", unsafe_allow_html=True)
             st.markdown("<br><br>", unsafe_allow_html=True) # Espaçamento
             st.markdown("<h4 style='text-align: center; color: #8e8f94'>INPACTA 2025</h4>", unsafe_allow_html=True)
 

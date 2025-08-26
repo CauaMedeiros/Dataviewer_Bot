@@ -23,7 +23,7 @@ class Bot:
     def __init__(self, api_key, profile_number=0):
         self.api_key = api_key
         self.llm = ChatGoogleGenerativeAI(model="gemini-2.0-flash", google_api_key=api_key, temperature=0.6)
-        self.embedding = GoogleGenerativeAIEmbeddings(model="models/text-embedding-004", google_api_key=api_key)
+        self.embedding = GoogleGenerativeAIEmbeddings(model="models/gemini-embedding-001", google_api_key=api_key)
 
         self.persist_directory = "./db"
         self.max_history = 5

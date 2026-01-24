@@ -1,8 +1,3 @@
-__import__('pysqlite3')
-import sys
-sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
-import pysqlite3
-
 from langchain_community.document_loaders import TextLoader
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_core.prompts import ChatPromptTemplate
@@ -22,7 +17,7 @@ from dotenv import load_dotenv
 class Bot:
     def __init__(self, api_key, profile_number=0):
         self.api_key = api_key
-        self.llm = ChatGoogleGenerativeAI(model="gemini-2.0-flash-lite", google_api_key=api_key, temperature=0.6)
+        self.llm = ChatGoogleGenerativeAI(model="gemini-3-flash-preview", google_api_key=api_key, temperature=0.6)
         self.embedding = GoogleGenerativeAIEmbeddings(model="models/text-embedding-004", google_api_key=api_key)
 
         self.persist_directory = "./db"

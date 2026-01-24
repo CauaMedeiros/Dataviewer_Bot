@@ -30,20 +30,20 @@ if st.session_state.current_screen == "home":
     col1, col2, col3, col4, col5, col6, col7 = st.columns([1, 2, 1, 2, 1, 2, 1])
 
     with col2:
-        st.image(r"imgs/profile1.svg", use_container_width=True)
-        if st.button("Perfil 1", use_container_width=True):
+        st.image(r"imgs/profile1.svg", width='stretch')
+        if st.button("Perfil 1", width='stretch'):
             st.session_state.user_profile_number = 0
             change_screen("chat")
         st.markdown("<p style='text-align: center; color: #8e8f94; font-size:14px'>Didático e Focado em Conceitos Fundamentais</p>", unsafe_allow_html=True)
     with col4:
-        st.image(r"imgs/profile2.svg", use_container_width=True)
-        if st.button("Perfil 2", use_container_width=True):
+        st.image(r"imgs/profile2.svg", width='stretch')
+        if st.button("Perfil 2", width='stretch'):
             st.session_state.user_profile_number = 1
             change_screen("chat")
         st.markdown("<p style='text-align: center; color: #8e8f94; font-size:14px'>Auxilia a Solucionar as Principais Dúvidas de Programação</p>", unsafe_allow_html=True)
     with col6:
-        st.image(r"imgs/profile3.svg", use_container_width=True)
-        if st.button("Perfil 3", use_container_width=True):
+        st.image(r"imgs/profile3.svg", width='stretch')
+        if st.button("Perfil 3", width='stretch'):
             st.session_state.user_profile_number = 2
             change_screen("chat")
         st.markdown("<p style='text-align: center; color: #8e8f94; font-size:14px'>Desafia e Apresenta Conceitos Avançados</p>", unsafe_allow_html=True)
@@ -55,8 +55,8 @@ elif st.session_state.current_screen == "chat":
     with st.sidebar:
             st.markdown("<br><br>", unsafe_allow_html=True)
             st.markdown("<p style='text-align: center; color: #8e8f94; font-size:14px'>Bot Educacional desenvolvido para apoiar alunos com dúvidas em programação. É o resultado de um projeto de pesquisa desenvolvido por estudantes da Escola de Ciência e Tecnologia da UFRN, com o objetivo de facilitar o aprendizado e promover o desenvolvimento de habilidades na área.</p>", unsafe_allow_html=True)
-            st.markdown("<br><br>", unsafe_allow_html=True) # Espaçamento
-            st.markdown("<h4 style='text-align: center; color: #8e8f94'>INPACTA 2025</h4>", unsafe_allow_html=True)
+            st.markdown("<br><br>", unsafe_allow_html=True) 
+            st.markdown("<h4 style='text-align: center; color: #8e8f94'>INPACTA 2026</h4>", unsafe_allow_html=True)
 
     if "user_id" not in st.session_state:
         user_id = st.text_input("Digite sua matrícula:")

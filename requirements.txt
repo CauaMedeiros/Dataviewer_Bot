@@ -16,3 +16,4 @@ streamlit
 pysqlite3-binary
 chromadb
 chromadb
+protobuf==3.20.3

@@ -17,3 +17,4 @@ pysqlite3-binary
 chromadb
 chromadb
 protobuf==3.20.3
+altair==4.2.2

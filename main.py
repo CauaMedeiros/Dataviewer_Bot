@@ -49,7 +49,7 @@ if st.session_state.current_screen == "home":
         st.markdown("<p style='text-align: center; color: #8e8f94; font-size:14px'>Desafia e Apresenta Conceitos Avançados</p>", unsafe_allow_html=True)
 
 elif st.session_state.current_screen == "chat":
-    st.sidebar.image(r"imgs/dataviewer_logo.svg", use_container_width=True)
+    st.sidebar.image(r"imgs/dataviewer_logo.svg", width='stretch')
 
 
     with st.sidebar:
@@ -66,7 +66,9 @@ elif st.session_state.current_screen == "chat":
     else:
 
         if "bot" not in st.session_state:
-            api_key = st.secrets["GOOGLE_API_KEY"]
+            #api_key = st.secrets["GOOGLE_API_KEY"]
+            load_dotenv()
+            api_key = os.getenv("GOOGLE_API_KEY")
             profile_number = 0  # ou outro valor se quiser personalizar
             profile_number = st.session_state.user_profile_number
             st.session_state.bot = Bot(api_key, profile_number)

@@ -5,11 +5,7 @@ seaborn
 scikit-learn
 google-generativeai
 pymupdf
-langchain
-langchain-community
-langchain-chroma
-langchain-ollama
-langchain-google-genai
+langchain==0.1.16
 joblib
 pypdf
 streamlit

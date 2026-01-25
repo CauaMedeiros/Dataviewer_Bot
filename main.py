@@ -66,9 +66,7 @@ elif st.session_state.current_screen == "chat":
     else:
 
         if "bot" not in st.session_state:
-            #api_key = st.secrets["GOOGLE_API_KEY"]
-            load_dotenv()
-            api_key = os.getenv("GOOGLE_API_KEY")
+            api_key = st.secrets["GOOGLE_API_KEY"]
             profile_number = 0  # ou outro valor se quiser personalizar
             profile_number = st.session_state.user_profile_number
             st.session_state.bot = Bot(api_key, profile_number)
